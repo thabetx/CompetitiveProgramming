@@ -63,13 +63,12 @@ int main() {
   while(t--){
     point a,b;
     ld r;
-		scanf("%Lf %Lf %Lf %Lf %Lf",&a.x,&a.y,&b.x,&b.y,&r);
-    point o={0,0};
+    scanf("%Lf %Lf %Lf %Lf %Lf",&a.x,&a.y,&b.x,&b.y,&r);
 
     ld c=closest(a,b);
     if(c>=r){
-			ld ans= hypot(a.x-b.x,a.y-b.y);
-			printf("%.3Lf\n",ans);
+      ld ans= hypot(a.x-b.x,a.y-b.y);
+      printf("%.3Lf\n",ans);
       continue;
     }
 
@@ -85,6 +84,6 @@ int main() {
                     min( calcAngle(ta2,tb1), calcAngle(ta2, tb2)));
     ld sec=r*angle;
     ld ans=l1+sec+l2;
-		printf("%.3Lf\n",ans);
+    printf("%.3Lf\n",ans);
   }
 }
